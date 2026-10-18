@@ -1,0 +1,23 @@
+#repo-mask-toggle { white-space: nowrap; font-size: .85em; }
+#repo-mask-toggle.repo-mask-active { border-color: #8ab8ee !important; box-shadow: 0 0 0 1px rgba(138,184,238,.3); }
+.repo-mask-marked { filter: blur(var(--repo-mask-blur, 7px)); border-radius: .18em; user-select: none; -webkit-user-select: none; }
+#repo-mask-panel { display:none; position:fixed; z-index:999999; top:64px; right:12px; width:min(350px,calc(100vw - 24px)); max-height:calc(100dvh - 84px); overflow:auto; box-sizing:border-box; padding:14px; color:var(--SmartThemeBodyColor,#eee); background:var(--SmartThemeBlurTintColor,rgba(25,29,38,.98)); border:1px solid var(--SmartThemeBorderColor,#60738a); border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,.35); font-size:14px; }
+#repo-mask-panel.repo-mask-open { display:block; }
+#repo-mask-panel header { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:8px; }
+#repo-mask-panel header strong { font-size:1.08em; }
+#repo-mask-panel button { cursor:pointer; border:1px solid var(--SmartThemeBorderColor,#60738a); border-radius:7px; padding:6px 10px; color:inherit; background:var(--SmartThemeQuoteColor,rgba(255,255,255,.08)); }
+#repo-mask-panel #rm-close { font-size:20px; line-height:1; padding:2px 8px; }
+#repo-mask-panel .rm-tip,#repo-mask-panel .rm-foot { opacity:.78; font-size:.86em; line-height:1.45; }
+#repo-mask-panel .rm-switch { display:flex; align-items:center; gap:9px; margin:10px 0; cursor:pointer; }
+#repo-mask-panel .rm-switch input { flex:0 0 auto; }
+#repo-mask-panel .rm-main { font-weight:600; }
+#repo-mask-panel hr { border:0; border-top:1px solid var(--SmartThemeBorderColor,#60738a); opacity:.7; }
+#repo-mask-panel .rm-npc-box { margin:12px 0; }
+#repo-mask-panel .rm-npc-box small { display:block; margin-bottom:8px; opacity:.78; line-height:1.4; overflow-wrap:anywhere; }
+#repo-mask-panel .rm-npc-box label { display:block; margin-bottom:6px; }
+#repo-mask-panel textarea { width:100%; box-sizing:border-box; resize:vertical; color:inherit; background:var(--SmartThemeBlurTintColor,rgba(0,0,0,.2)); border:1px solid var(--SmartThemeBorderColor,#60738a); border-radius:7px; padding:8px; }
+#repo-mask-panel .rm-range { display:flex; justify-content:space-between; margin:12px 0 4px; }
+#repo-mask-panel #rm-blur { width:100%; }
+#repo-mask-panel footer { margin-top:12px; }
+#repo-mask-panel #rm-off { width:100%; }
+@media(max-width:600px) { #repo-mask-panel { top:auto; right:8px; bottom:12px; width:calc(100vw - 16px); max-height:75dvh; } }
